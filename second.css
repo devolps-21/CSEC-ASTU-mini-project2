@@ -70,13 +70,24 @@ textarea {
     border-radius: 5px;
 }
 form {
-    width:300px;
-    margin:2rem auto ;
-    display:flex;
+    width: 300px;
+    margin: 2rem auto;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Keeps the form itself centered */
     font-family: 'Poppins', sans-serif;
-   
+}
+form label, 
+form input, 
+form textarea {
+    width: 100%;            /* Makes them all the same width */
+    align-self: flex-start; /* Aligns them all to the left edge of the form */
+}
+input, textarea {
+    margin-bottom: 15px;    /* Adds space between the input and the next label */
+    padding: 8px;           /* Makes the input boxes easier to type in */
+    border: 1px solid #ccc; /* Gives a subtle border */
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
 }
 #contact {
    text-align: center;
@@ -91,7 +102,9 @@ section {
     align-items: center;
 }
 form label {
-    text-align: left;
+    align-self: flex-start; /* This aligns the label to the left corner of the form */
+    margin-bottom: 5px;      /* Adds a little space above the input */
+    font-weight: 500;        /* Optional: makes labels stand out */
 }
 button {
     margin-top:1em;
